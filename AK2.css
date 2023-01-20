@@ -1,0 +1,24 @@
+:root {
+    --maxwidth: 1200px;
+    --rootsize: 20px;
+}
+header {
+    display: flex;
+    padding: 1rem;
+}
+header h1{
+
+}
+div.container {
+    width: 100%;
+    max-width: var(--maxwidth);
+    margin: 0 auto;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+main p {
+    color: beige;
+}
+
