@@ -94,3 +94,106 @@ const resources = [
         ]
     },
 ]
+
+printHTML()
+
+function printHTML() {
+    htmlHTML = "";
+    const htmltab = resources.filter((catg) => catg.category === "HTML");
+    htmltab.map((catg) => {
+        htmlHTML += `
+        <h1>${catg.category}</h1>
+        <p>${catg.text}
+        `
+        catg.sources.map((links) => {
+            htmlHTML += `
+            <ul><li><a href="${links.url}">${links.title}</a></li></ul>
+            `
+        })
+         })
+         document.getElementById("printarea").innerHTML = htmlHTML;
+        }
+
+
+function printCSS() {
+CSSHTML = "";
+const CSStab = resources.filter((catg) => catg.category === "CSS");
+CSStab.map((catg) => {
+    CSSHTML += `
+    <h1>${catg.category}</h1>
+    <p>${catg.text}
+    `
+    catg.sources.map((links) => {
+        CSSHTML += `
+        <ul><li><a href="${links.url}">${links.title}</a></li></ul>
+        `
+    })
+     })
+     document.getElementById("printarea").innerHTML = CSSHTML;
+    }
+
+
+    function printJS() {
+        jsHTML = "";
+        const jstab = resources.filter((catg) => catg.category === "JavaScript");
+        jstab.map((catg) => {
+            jsHTML += `
+            <h1>${catg.category}</h1>
+            <p>${catg.text}
+            `
+            catg.sources.map((links) => {
+                jsHTML += `
+                <ul><li><a href="${links.url}">${links.title}</a></li></ul>
+                `
+            })
+             })
+             document.getElementById("printarea").innerHTML = jsHTML;
+            }
+
+function printReact() {
+reactHTML = "";
+const reacttab = resources.filter((catg) => catg.category === "React");
+reacttab.map((catg) => {
+    reactHTML += `
+    <h1>${catg.category}</h1>
+    <p>${catg.text}
+    `
+    catg.sources.map((links) => {
+        reactHTML += `
+        <ul><li><a href="${links.url}">${links.title}</a></li></ul>
+        `
+    })
+     })
+     document.getElementById("printarea").innerHTML = reactHTML;
+    }
+
+
+    function printSanity() {
+        sanityHTML = "";
+        const sanitytab = resources.filter((catg) => catg.category === "Sanity and headless CMS");
+        sanitytab.map((catg) => {
+            sanityHTML += `
+            <h1>${catg.category}</h1>
+            <p>${catg.text}
+            `
+            catg.sources.map((links) => {
+                sanityHTML += `
+                <ul><li><a href="${links.url}">${links.title}</a></li></ul>
+                `
+            })
+             })
+             document.getElementById("printarea").innerHTML = sanityHTML;
+            }
+
+
+
+
+
+var btns = document.querySelectorAll(".btn");
+   Array.from(btns).forEach(item => {
+      item.addEventListener("click", () => {
+         var selected = document.getElementsByClassName("active");
+         selected[0].className = selected[0].className.replace(" active", "");
+         item.className += " active";
+      });
+   });

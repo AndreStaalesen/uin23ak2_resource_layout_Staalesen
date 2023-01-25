@@ -1,24 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 :root {
-    --maxwidth: 1200px;
-    --rootsize: 20px;
+--maxwidth: 1200px;
+--rootsize: 36px;
 }
-header {
-    display: flex;
-    padding: 1rem;
-}
-header h1{
+
+header{
+    width: 100%;
+    max-width: var(--maxwidth);
+    margin: 4rem auto;
+    border: 0.5px solid #dbdbdb;
 
 }
-div.container {
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 1rem;
+    padding: 2.5rem;
+    font-weight: bolder;
+    color: #969696;
+}
+header h1 a {
+    text-decoration: none;
+    color: #969696;
+}
+
+main {
     width: 100%;
     max-width: var(--maxwidth);
     margin: 0 auto;
-    background-color: black;
-    overflow: hidden;
-    position: relative;
+    background-color: #fff;
+}
+main section {
+    border: 0.5px solid #dbdbdb;
+    border-top: 7px solid aqua;
+    padding-left: 1rem;
+    padding-bottom: 5rem;
+    color: #969696;
+    font-family: 'Roboto', sans-serif;
+}
+main section h1 {
+   font-size: 2rem;
+}
+main section p {
+    font-weight:300;
+    font-size: large;
 }
 
-main p {
-    color: beige;
+nav {
+ padding-top: 1rem;
+ max-width: var(--maxwidth);
+ text-align: left;
+
 }
+
+nav button {
+ font-size: 1.7rem;
+ padding: 2rem;
+ border: 0.5px solid #dbdbdb;
+ color: #969696;
+}
+
+.active, .btn:hover {
+    background-color: aqua;
+    color: white;
+    border-style: none;
+  }
+
 
